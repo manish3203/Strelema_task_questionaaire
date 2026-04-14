@@ -1,79 +1,95 @@
-# 📋 Questionnaire App (Flutter)
+# 🖥️ Digital Questionnaire Platform (Flutter)
 
-An offline-first Flutter application that dynamically renders questionnaires, captures user responses, records device location metadata, and stores submissions locally using Hive. Backend services are simulated using MockAPI.
+A robust, offline-capable Flutter application engineered to deliver dynamic surveys to end users, record geo-tagged responses, and persist structured data locally — all without requiring continuous network access. REST integration is handled through MockAPI, simulating production backend behavior.
 
-This project demonstrates clean architecture principles, user-scoped local persistence, and dynamic UI rendering.
-
----
-
-## ✨ Features
-
-✅ Dynamic questionnaires fetched from MockAPI  
-✅ Offline-first architecture (works without internet)  
-✅ Local database using Hive  
-✅ Multi-user support with user-scoped submissions  
-✅ Location capture during submission  
-✅ GetX state management & navigation  
-✅ Toast notifications & smooth UX  
+Built to showcase scalable architecture patterns, device-aware data collection, and per-user data isolation in a mobile-first environment.
 
 ---
 
-## 🧱 Architecture Overview
+## ✨ Capabilities
 
-The application follows a clean separation of concerns:
+✅ Surveys rendered dynamically from remote API  
+✅ Offline-first design — fully functional without internet  
+✅ Structured local persistence via Hive NoSQL database  
+✅ Isolated data per user — no cross-user data leakage  
+✅ Geo-coordinates captured and stored at submission time  
+✅ Reactive state management and routing via GetX  
+✅ Contextual toast feedback throughout the user journey  
 
-**UI Layer**
-- Screens & Widgets
-- Stateless presentation logic
+---
+
+## 🧱 Architecture
+
+The platform is structured around a strict separation of responsibilities:
+
+**Presentation Layer**
+- Screens & reusable widget components
+- Purely declarative, logic-free UI
 
 **Controller Layer (GetX)**
-- Business logic
-- State management
-- Navigation handling
+- All business logic encapsulated here
+- Drives reactive state and screen transitions
 
 **Service Layer**
-- API communication (MockAPI)
-- Local storage abstraction
+- HTTP communication with MockAPI
+- Abstracted local storage interface
 
 **Data Layer**
-- Hive models & adapters
-- Persistent offline storage
+- Hive-backed models with registered TypeAdapters
+- Durable offline-first data contracts
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Flutter** → UI Framework
-- **GetX** → State Management & Navigation
-- **Hive** → Local NoSQL Database
-- **HTTP** → API Communication
-- **MockAPI** → Backend Simulation
-- **Geolocator** → GPS / Location Services
-- **Intl** → Date Formatting
-- **FlutterToast** → Notifications
-- **Flutter Native Splash** → Splash Screen
+| Concern | Tool |
+|---|---|
+| UI Framework | Flutter |
+| State & Navigation | GetX |
+| Local Database | Hive |
+| Network | HTTP |
+| Backend Simulation | MockAPI |
+| Location Services | Geolocator |
+| Date Formatting | Intl |
+| In-app Notifications | FlutterToast |
+| Splash Screen | Flutter Native Splash |
 
 ---
 
-## 📦 Dependencies
+## 📦 Package Dependencies
 
-Key packages used in this project:
-
-- `get`
-- `http`
-- `hive`
-- `hive_flutter`
-- `path_provider`
-- `geolocator`
-- `intl`
-- `fluttertoast`
-- `flutter_native_splash`
+```yaml
+dependencies:
+  get:
+  http:
+  hive:
+  hive_flutter:
+  path_provider:
+  geolocator:
+  intl:
+  fluttertoast:
+  flutter_native_splash:
+```
 
 ---
 
-## 🚀 Setup Instructions
+## 🚀 Getting Started
 
-### 1️⃣ Clone Repository
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/Adityakaldhone/questionnaire_application_flutter.git
+git https://github.com/manish3203/Strelema_task_questionaaire.git
+cd Strelema_task_questionaaire
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### 3️⃣ Run the Application
+
+```bash
+flutter run
+```
